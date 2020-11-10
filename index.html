@@ -28,9 +28,12 @@
         </header>
         <main>
             <div class="add-bar-and-button">
-                <input type="text" class="todo-addbar" placeholder="Inserisci una nuova task!">
-                <button class="todo-button">Aggiungi task! <i class="fas fa-tasks"></i></button>
+                <!-- Con l'utilizzo di v-model associo ciò che scrive l'utente nell'input text a newTodo nella sezione data del mio Vuejs, associazione che mi permette creando una funzione ad hoc di creare una nuova task con quanto inserito dall'utente -->
+                <input v-model="newTodo" type="text" class="todo-addbar" placeholder="Inserisci una nuova task!">
+                <input v-model="newWhenTodo" type="text" class="todo-addbar" placeholder="Entro quando va fatta? ">
+                <button @click="addTodo" class="todo-button"> Aggiungi task! <i class="fas fa-tasks"></i></button>
             </div>
+
             <ul class="todo-list">
                 <li v-for="todo in todos">
                     <span> {{ todo.whattodo }} <small> {{ todo.whentodo }} </small> </span>

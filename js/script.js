@@ -1,8 +1,12 @@
 const apptodo = new Vue ({ 
     el: '#apptodo',
+
     data: {
+
+        newTodo: '',
+        newWhenTodo: '',
         todos: [
-            {
+            {   
                 whattodo: 'Completare il CSS della nostra app',
                 whentodo: 'Nel pomeriggio'
             },
@@ -18,6 +22,18 @@ const apptodo = new Vue ({
                 whattodo: 'Cercare secondo schermo 21/9',
                 whentodo: 'In settimana'
             },
-        ]
+        ],
+
+
+    },
+
+    methods: {
+        addTodo() {
+            this.todos.push({
+                whattodo: this.newTodo,
+                whentodo: this.newWhenTodo
+            })
+        }
     }
+
 });
