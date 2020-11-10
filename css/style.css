@@ -1,0 +1,106 @@
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Trispace', sans-serif;
+    background: #2d3047;
+}
+
+/* LAYOUT */
+
+/* App container */
+#apptodo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* header (title & logos) */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f8e16c ;
+
+}
+
+h1{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.logo{
+    max-width: 100px;
+}
+
+/* Main bar & button */
+.add-bar-and-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-addbar {
+    width: 70%;
+    height: 50px;
+    background: rgba(255,255,255, .9); 
+    line-height: 50px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    border: 0;
+    box-shadow: 0 15px 10px -10px rgba(0,0,0, .8);
+    outline: 0;
+    transition: background .2s;
+}
+
+
+.todo-addbar:hover,
+.todo-addbar:focus{
+    background: #fff;
+}
+
+.todo-button {
+    width: 25%;
+    height: 50px;
+    background: #f8e16c;
+    opacity: 0.8;
+    transition: opacity .2s;
+}
+
+.todo-button:hover {
+    opacity: 1;
+}
+
+/* To do list */
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    color: #f8e16c;
+}
+
+.todo-list li span small {
+font-size: 10px;
+color: #ff9b71;
+}
+
+.todo-list li:last-child {
+    border-bottom: none;
+}
+
+.todo-list li i {
+    opacity: .8;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.todo-list li i:hover {
+    opacity: 1;
+}
