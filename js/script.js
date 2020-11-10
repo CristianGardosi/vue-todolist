@@ -2,9 +2,6 @@ const apptodo = new Vue ({
     el: '#apptodo',
 
     data: {
-
-        newTodo: '',
-        newWhenTodo: '',
         todos: [
             {   
                 whattodo: 'Completare il CSS della nostra app',
@@ -24,7 +21,9 @@ const apptodo = new Vue ({
             },
         ],
 
+        newTodo: '',
 
+        newWhenTodo: ''
     },
 
     methods: {
@@ -33,6 +32,9 @@ const apptodo = new Vue ({
                 whattodo: this.newTodo,
                 whentodo: this.newWhenTodo
             })
+            // Pulisco la form una volta inviata la mia task in modo da poterne inserire un'altra
+            this.newTodo = '';
+            this.newWhenTodo = '';
         }
     }
 

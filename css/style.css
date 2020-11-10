@@ -69,7 +69,8 @@ h1{
 .todo-button {
     width: 25%;
     height: 50px;
-    background: #f37735;
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  
+    background: linear-gradient(to right, #F37335, #FDC830); 
     opacity: 0.8;
     transition: opacity .2s;
 }
@@ -106,3 +107,9 @@ color: #fdc730;
 .todo-list li i:hover {
     opacity: 1;
 }
+
+.done {
+    color: #f37735;
+    opacity: .4;
+}
+

@@ -33,13 +33,13 @@
                 <input v-model="newWhenTodo" type="text" class="todo-addbar" placeholder="Entro quando va eseguita? ">
                 <button @click="addTodo" class="todo-button"> <i class="fas fa-tasks"></i> Aggiungi task! <i class="fas fa-hourglass-half"></i></button>
             </div>
-
             <ul class="todo-list">
                 <li v-for="todo in todos">
-                    <span> {{ todo.whattodo }} <small> {{ todo.whentodo }} </small> </span>
+                    <!-- Implemento la funzionalità di check sulle mie task completate che si collega alla classe css .done che abbassa l'opacità per evidenziarne il completamento -->
+                    <input v-model="todo.done" type="checkbox" name="tododone" id="tododone">
+                    <span v-bind:class="{done: todo.done}"> {{ todo.whattodo }} <small> {{ todo.whentodo }} </small> </span>
                     <i class="fas fa-trash-alt"></i>
                 </li>
-        
             </ul>
         </main>
     </div>
