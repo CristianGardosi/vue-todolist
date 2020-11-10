@@ -7,7 +7,10 @@
 
 body {
     font-family: 'Trispace', sans-serif;
-    background: #2d3047;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+
+
 }
 
 /* LAYOUT */
@@ -25,8 +28,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    background: #f8e16c ;
-
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  
+    background: linear-gradient(to right, #F37335, #FDC830); 
 }
 
 h1{
@@ -66,7 +69,7 @@ h1{
 .todo-button {
     width: 25%;
     height: 50px;
-    background: #f8e16c;
+    background: #f37735;
     opacity: 0.8;
     transition: opacity .2s;
 }
@@ -82,12 +85,12 @@ h1{
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255,255,255, .2);
-    color: #f8e16c;
+    color: #f37735;
 }
 
 .todo-list li span small {
 font-size: 10px;
-color: #ff9b71;
+color: #fdc730;
 }
 
 .todo-list li:last-child {
