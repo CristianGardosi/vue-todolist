@@ -35,6 +35,13 @@ const apptodo = new Vue ({
             // Pulisco la form una volta inviata la mia task in modo da poterne inserire un'altra
             this.newTodo = '';
             this.newWhenTodo = '';
+        },
+        // Funzione per eliminare una task tramite il @click su un elemento HTML e basata sul suo indice all'interno dell'array con l'utilizzo della nuova funzionalità .splice
+        // 
+        removeTodo(todo) {
+            const todoIndex = this.todos.indexOf(todo);
+            // Con questa sintassi splice elimina l'elemento associato al click, se non indicassi 1 li eliminerebbe tutti 
+            this.todos.splice(todoIndex, 1);
         }
     }
 
