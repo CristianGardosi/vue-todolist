@@ -115,10 +115,63 @@ color: #fdc730;
 
 .todo-list li i:hover {
     opacity: 1;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes shake {
+    0% { transform: translate(0px, 0px) rotate(0deg); }    25% { transform: translate(1px, 1px) rotate(1deg); }
+    50% { transform: translate(-1px, -1px) rotate(-1deg); }
+    75% { transform: translate(2px, -1px) rotate(2deg); }
+    100% { transform: translate(-1px, 1px) rotate(-1deg); }
+  }
 
 .done {
     color: #f37735;
     opacity: .4;
+}
+
+/* Media query gestione tablet e mobile */
+
+@media (max-width: 992px) { 
+
+    .add-bar-and-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .todo-addbar {
+        width: 80%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+
+    }
+
+    .todo-button {
+        width: 60%;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .todo-list li {
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+
+    }
+
+    .todo-list li span small {
+        display: block;
+        font-size: 10px;
+        color: #fdc730;
+        }
+
+        .todo-list li i {
+            margin-top: 15px;
+        }
+
 }
 
