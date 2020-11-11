@@ -43,6 +43,15 @@ h1{
 }
 
 /* Main bar & button */
+.todo-list p {
+    text-align: center;
+    color: #F37335;
+}
+
+.todo-list p i {
+    color: #FDC830;
+}
+
 .add-bar-and-button {
     display: flex;
     justify-content: space-between;

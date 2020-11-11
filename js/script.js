@@ -28,10 +28,14 @@ const apptodo = new Vue ({
 
     methods: {
         addTodo() {
-            this.todos.push({
-                whattodo: this.newTodo,
-                whentodo: this.newWhenTodo
-            })
+            if (this.newTodo.trim() !== '' && this.newWhenTodo.trim() !== '') {
+                this.todos.push(
+                    {
+                    whattodo: this.newTodo,
+                    whentodo: this.newWhenTodo
+                    }
+                );
+            }
             // Pulisco la form una volta inviata la mia task in modo da poterne inserire un'altra
             this.newTodo = '';
             this.newWhenTodo = '';

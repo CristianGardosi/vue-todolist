@@ -34,6 +34,11 @@
                 <button @click="addTodo" class="todo-button"> <i class="fas fa-tasks"></i> Aggiungi task! <i class="fas fa-hourglass-half"></i></button>
             </div>
             <ul class="todo-list">
+                <p v-if="todos.length === 0">
+                    <i class="fas fa-glass-cheers"></i>
+                     Aggiungi nuove task e completa i tuoi obbiettivi!
+                    <i class="fas fa-glass-cheers"></i>
+                </p>
                 <li v-for="todo in todos">
                     <!-- Implemento la funzionalità di check sulle mie task completate che si collega alla classe css .done che abbassa l'opacità per evidenziarne il completamento -->
                     <input v-model="todo.done" type="checkbox" name="tododone" id="tododone">
@@ -43,7 +48,6 @@
             </ul>
         </main>
     </div>
-
 
     <!-- JS -->
     <script src="./js/script.js"></script>
