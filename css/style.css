@@ -131,7 +131,7 @@ color: #fdc730;
     opacity: .4;
 }
 
-/* Media query gestione tablet e mobile */
+/* Media query gestione tablet e mobile (992px) */
 
 @media (max-width: 992px) { 
 
