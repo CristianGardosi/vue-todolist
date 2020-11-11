@@ -41,7 +41,7 @@
                 </p>
                 <li v-for="todo in todos">
                     <!-- Implemento la funzionalità di check sulle mie task completate che si collega alla classe css .done che abbassa l'opacità per evidenziarne il completamento -->
-                    <input v-model="todo.done" type="checkbox" name="tododone" id="tododone">
+                    <input class="checkbox" v-model="todo.done" type="checkbox" name="tododone" id="tododone">
                     <span v-bind:class="{done: todo.done}"> {{ todo.whattodo }} <small> {{ todo.whentodo }} </small> </span>
                     <i @click="removeTodo(todo)" class="fas fa-trash-alt"></i>
                 </li>

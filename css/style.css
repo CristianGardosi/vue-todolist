@@ -156,7 +156,6 @@ color: #fdc730;
     }
 
     .todo-list li {
-        max-width: 100%;
         margin-bottom: 20px;
         padding-bottom: 20px;
         text-align: center;
@@ -169,8 +168,13 @@ color: #fdc730;
         color: #fdc730;
         }
 
+        .checkbox {
+            margin-right: 10px;
+        }
+
         .todo-list li i {
-            margin-top: 15px;
+            line-height: 40px;
+            margin-left: 10px;
         }
 
 }
